@@ -5,9 +5,12 @@ interface I1{
 
 interface I2{
 
-    void show2();
+    
+    default void show2() { // Default method with implementation
+        System.out.println("Default implementation of show2");
+    }
 }
-class Interface implements I1{
+class Interface implements I1, I2{
 
     public void show1(){
 
@@ -19,6 +22,7 @@ class Interface implements I1{
         System.out.println("B");
 
     }
+    
 
     public static void main(String[] args){
 
