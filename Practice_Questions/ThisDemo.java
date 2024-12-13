@@ -14,7 +14,9 @@ class ThisDemo{
     }
     public static void main(String[] args){
 
-     ThisDemo td=new ThisDemo(10);
+     ThisDemo td1=new ThisDemo();
+     ThisDemo tf2=new ThisDemo(10);
+     
     
     }
 }
