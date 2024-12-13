@@ -23,20 +23,48 @@
 
 
 //-------------------------this() keyword can be used to pass as an argument in the method call------------------------------
+// class ThisDemo{
+
+//     void m1(ThisDemo hi){
+
+//         System.out.println("method1");
+//     }
+
+//     void m2(){
+
+//         m1(this);
+//     }
+//     public static void main(String[] args){
+
+//         ThisDemo td=new ThisDemo();
+//         td.m2();
+//     }
+// }
+
+
+
+
+
+//------------------------this keyword can be used to pass as an argument in the constructor call--------------------
+
+class Test{
+
+    Test(ThisDemo a){
+
+        System.out.println("constructor call");
+    }
+}
+
 class ThisDemo{
 
-    void m1(ThisDemo hi){
+    void m1(){
 
-        System.out.println("method1");
-    }
+        Test t=new Test(this);
 
-    void m2(){
-
-        m1(this);
     }
     public static void main(String[] args){
 
         ThisDemo td=new ThisDemo();
-        td.m2();
+        td.m1();
     }
 }
