@@ -45,26 +45,42 @@
 
 
 
+
 //------------------------this keyword can be used to pass as an argument in the constructor call--------------------
 
-class Test{
+// class Test{
 
-    Test(ThisDemo a){
+//     Test(ThisDemo a){
 
-        System.out.println("constructor call");
-    }
-}
+//         System.out.println("constructor call");
+//     }
+// }
 
+// class ThisDemo{
+
+//     void m1(){
+
+//         Test t=new Test(this);
+
+//     }
+//     public static void main(String[] args){
+
+//         ThisDemo td=new ThisDemo();
+//         td.m1();
+//     }
+// }
+
+
+
+//--------------------this keyword can be used to return the current class instance from the method-----------------
 class ThisDemo{
 
-    void m1(){
-
-        Test t=new Test(this);
-
+    ThisDemo m1()
+    {
+        return this;
     }
     public static void main(String[] args){
-
         ThisDemo td=new ThisDemo();
-        td.m1();
+      System.out.println( td.m1());
     }
 }
