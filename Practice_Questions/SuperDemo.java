@@ -19,27 +19,52 @@
 
 //----------------super keyword can be used to invoke immediate parent class method-------------------------
 
+// class A{
+
+//     void m(){
+
+//         System.out.println("This is class A");
+//     }
+// }
+// class SuperDemo extends A{
+
+//     void m(){
+
+//         System.out.println("This is class superdemo");
+//     }
+
+//     void show(){
+
+//         m();
+//         super.m();
+//     }
+//     public static void main (String[] args){
+//         SuperDemo ob=new SuperDemo();
+//         ob.show();
+//     }
+// }
+
+
+//-----------------super() can be used to invoke immediate parent class constructor-------------
+
 class A{
 
-    void m(){
-
-        System.out.println("This is class A");
+    A()
+    {
+      System.out.println("In class A");
     }
 }
 class SuperDemo extends A{
 
-    void m(){
+    
+    SuperDemo(){
 
-        System.out.println("This is class superdemo");
+        super();
+        System.out.println("In class SuperDemo");
     }
-
-    void show(){
-
-        m();
-        super.m();
-    }
-    public static void main (String[] args){
+    public static void main(String[] args){
         SuperDemo ob=new SuperDemo();
-        ob.show();
     }
 }
+
+
